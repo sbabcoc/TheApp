@@ -1,0 +1,46 @@
+{
+  "name": "theapp2",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "ios": "react-native run-ios",
+    "android": "react-native run-android",
+    "build-ios-release": "react-native run-ios --configuration Release",
+    "build-android": "cd android && ./gradlew assembleDebug",
+    "build-android-release": "cd android && ./gradlew clean assembleRelease && ./sign-android-release-apk.sh",
+    "show-ios-debug": "echo \"$(pwd)/ios/build/Build/Products/Debug-iphonesimulator/TheApp.app\"",
+    "show-ios-release": "echo \"$(pwd)/ios/build/Build/Products/Release-iphonesimulator/TheApp.app\"",
+    "show-android-release": "echo \"$(pwd)/android/app/build/outputs/apk/release/app-release.apk\"",
+    "show-android-debug": "echo \"$(pwd)/android/app/build/outputs/apk/debug/app-debug.apk\"",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "lodash": "^4.17.21",
+    "react": "17.0.2",
+    "react-native": "0.66.0",
+    "react-native-android-sms-listener": "^0.8.0",
+    "react-native-async-storage": "0.0.1",
+    "react-native-camera": "^4.2.1",
+    "react-native-elements": "^3.4.2",
+    "react-native-navigation": "^7.22.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-vector-icons": "^8.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "7.14.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "metro-bundler": "^0.22.1",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
